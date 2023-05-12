@@ -12,7 +12,7 @@
 %token SIN COS TAN LOG SQRT
 
 /*Defining the Precedence and Associativity*/
- %left '+''-'			//lowest precedence
+%left '+''-'			//lowest precedence
 %left '*''/'			//highest precedenc
 %nonassoc uminu			//no associativity
 %type<p>exp			//Sets the type for non - terminal

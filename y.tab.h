@@ -39,39 +39,21 @@
    /* Put the tokens into the symbol table, so that GDB and other debuggers
       know about them.  */
    enum yytokentype {
-     num = 258,
-     SIN = 259,
-     COS = 260,
-     TAN = 261,
-     LOG = 262,
-     SQRT = 263,
-     uminu = 264
+     A = 258,
+     B = 259,
+     NL = 260
    };
 #endif
 /* Tokens.  */
-#define num 258
-#define SIN 259
-#define COS 260
-#define TAN 261
-#define LOG 262
-#define SQRT 263
-#define uminu 264
+#define A 258
+#define B 259
+#define NL 260
 
 
 
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union YYSTYPE
-{
-
-/* Line 1676 of yacc.c  */
-#line 10 ".\\11scienCal.y"
- double p;
-
-
-/* Line 1676 of yacc.c  */
-#line 74 "y.tab.h"
-} YYSTYPE;
+typedef int YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
