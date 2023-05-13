@@ -6,9 +6,9 @@ int lc=0,sc=0,tc=0,ch=0,wc=0;
 
 
 %%
-[\n] { lc++; ch+=yyleng;}
-[ \t] { sc++; ch+=yyleng;}
-[^\t] { tc++; ch+=yyleng;}
+[\n] { lc++;}
+[ \t] { sc++;}
+[^\t] { tc++;}
 [^\t\n ]+ { wc++; ch+=yyleng;}
 %%
 

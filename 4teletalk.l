@@ -5,7 +5,7 @@
 %}
 
 %%
-0152[0-9]{7} printf("Teletalk number");
+015[0-9]{8} printf("Teletalk number");
 .* printf("Not teletalk number");
 %%
 

@@ -1,15 +1,18 @@
-%option noyywrap
 %{
-#include<stdio.h>
+#include <stdio.h>
 %}
-
-%%
-[0-9]+[eE^][+-]?[0-9]+ { printf("%s is a valid exponential number\n", yytext); }
-.+ {printf("%s is not a valid exponential number\n", yytext);}
-
+%option noyywrap
 %%
 
-int main(void) {
+[0-9]+[eE][+-]?[0-9]+ { printf("Exponential number: %s\n", yytext); }
+[0-9]*\.[0-9]+[eE][+-]?[0-9]+ { printf("Exponential number: %s\n", yytext); }
+[0-9]+ { printf("Integer: %s\n", yytext); }
+[0-9]*\.[0-9]+ { printf("Real number: %s\n", yytext); }
+.|\n { /* ignore other characters */ }
+
+%%
+
+int main() {
     yylex();
     return 0;
 }
