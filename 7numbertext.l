@@ -6,7 +6,7 @@ int n=1,w=0,c=0;
 \n {n++;}
 
 [^ \n\t]+ {w++;c=c+yyleng;}
-.c++;
+. {c++;}
 %%
 
 int yywrap(void)
